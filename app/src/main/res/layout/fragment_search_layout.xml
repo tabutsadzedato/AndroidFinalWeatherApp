@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/cityIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/dataView"
+        app:layout_constraintTop_toBottomOf="@id/weatherIv"
+        tools:src="@drawable/city_2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.7"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/weatherIv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/search_for_a_city"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/searchBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="@string/search"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/searchEt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/searchEt"
+        app:layout_constraintTop_toTopOf="@id/searchEt" />
+
+    <TextView
+        android:id="@+id/cityTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchEt"
+        tools:text="Tbilisi" />
+
+    <ImageView
+        android:id="@+id/weatherIv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/cityTv"
+        app:layout_constraintTop_toBottomOf="@id/cityTv" />
+
+    <TextView
+        android:id="@+id/weatherTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/weatherIv"
+        app:layout_constraintStart_toEndOf="@id/weatherIv"
+        app:layout_constraintTop_toTopOf="@id/weatherIv"
+        tools:text="23.0c" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/forecastRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:alpha="0.7"
+        app:layout_constraintTop_toBottomOf="@id/weatherIv" />
+
+    <com.example.weatherapp.view.WeatherDataView
+        android:id="@+id/dataView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:alpha="0.7"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

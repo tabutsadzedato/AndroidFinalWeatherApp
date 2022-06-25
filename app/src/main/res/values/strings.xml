@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="home">Home</string>
+    <string name="top_cities">Top Cities</string>
+    <string name="pressure">Pressure</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="humidity">Humidity</string>
+    <string name="search_for_a_city">Search for a city...</string>
+    <string name="search">Search</string>
+</resources>
